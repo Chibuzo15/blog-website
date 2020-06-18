@@ -1,0 +1,121 @@
+@import "ui.css";
+@import "post-card-grid.css";
+@import "blog-single-post.css";
+
+body{
+    margin:0px;
+    box-sizing: border-box;
+}
+
+#home-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto 40px;
+    grid-template-areas:
+    "hd"
+    "sd"
+    "main"
+    "ft"
+    ;
+}
+
+/* #container > section, #container > header {
+    border: 1px solid red
+} */
+
+header{
+    grid-area: hd;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+#navbar{
+    background-color: rgb(149, 149, 149);
+}
+
+#navbar > ul{
+    display: flex;
+    list-style: none;
+}
+
+#navbar > ul > li {
+    min-width: 100px;
+}
+
+#navbar > ul > li > a{
+    text-decoration: none;
+    font-size: 21px;
+    color: black
+}
+
+#navbar > ul > li > a:hover{
+    color: rgb(54, 81, 161)
+}
+
+#sidebar{
+    grid-area: sd;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+#content{
+    grid-area:main;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+.footer{
+    grid-area: ft;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(31, 30, 30);
+    color: white;
+}
+
+
+@media (min-width: 700px) and (max-width: 1000px){
+    #home-container{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto auto 70px;
+        grid-template-areas:
+        "hd hd"
+        "sd main"
+        "ft ft";
+    }
+
+    .blog-posts{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        grid-auto-rows: auto;
+    }
+
+    #navbar{
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 1001px){
+    #home-container{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto auto 70px;
+        grid-template-areas:
+        "hd hd"
+        "sd main"
+        "ft ft";
+    }
+
+    .blog-posts{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        grid-auto-rows: auto;
+    }
+
+    #navbar{
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,42 @@
+
+#subscribe{
+    background-color: transparent;
+    border: 2px solid rgb(54, 161, 161);
+    border-radius: 3px;
+    padding: 7px;
+    margin: 3px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: fit-content;
+}
+
+#subscribe > a {
+    color: rgb(54, 161, 161);
+}
+
+button > a{
+    text-decoration: none;
+}
+
+#follow{
+    color:white;
+    background-color: rgb(54, 161, 161);;
+    border: 2px solid rgb(54, 161, 161);
+    border-radius: 3px;
+    padding: 7px;
+    margin: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: fit-content;
+}
+
+
+#interact-bar{
+    display: flex;
+}
+
+@media (min-width: 700px) and (max-width: 1000px){
+    #interact-bar{
+        flex-direction: column;
+    }
+}

@@ -1,4 +1,4 @@
-#Basic blog website template
+# Basic blog website template
 
 ## Steps to Run
 * Clone repository
